@@ -4,7 +4,21 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun fibonacci(n: Int): Int {
-    TODO("Add your solution here")
+    if (n == 0){
+        return 0
+    }
+    if (n == 1) {
+        return 1
+    }
+    var lista: MutableList<Int> = mutableListOf(0,1)
+    (2..n).forEach {
+        var ultimaPos = lista.lastIndex
+        var penultimaPos = lista.lastIndex -1
+        val numFib = lista.get(ultimaPos) + lista.get(penultimaPos)
+        lista.add(numFib)
+    }
+    println(lista)
+    return lista.last()
 }
 
 private class Test {

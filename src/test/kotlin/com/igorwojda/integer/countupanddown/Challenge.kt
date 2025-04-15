@@ -4,7 +4,15 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun countUpAndDown(n: Int): List<Int> {
-    TODO("Add your solution here")
+    var x: MutableList<Int> = mutableListOf()
+    for (i in 0..n) {
+        x.add(i)
+    }
+    for (i in (n - 1) downTo 0 step 1) {
+        x.add(i)
+    }
+    println(x)
+    return (0 until n) + (n downTo 0)
 }
 
 private class Test {

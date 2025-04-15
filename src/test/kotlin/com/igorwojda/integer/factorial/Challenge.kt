@@ -4,8 +4,10 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun factorial(n: Int): Int {
-    TODO("Add your solution here")
+    return if (n == 0) 1
+    else (1..n).reduce { acc, num -> acc * num }
 }
+
 
 private class Test {
     @Test
