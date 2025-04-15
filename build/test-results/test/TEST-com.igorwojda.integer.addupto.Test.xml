@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.igorwojda.integer.addupto.Test" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-04-15T16:06:45.934Z" hostname="developer.local" time="0.009">
+  <properties/>
+  <testcase name="add up to 1()" classname="com.igorwojda.integer.addupto.Test" time="0.008"/>
+  <testcase name="add up to 3()" classname="com.igorwojda.integer.addupto.Test" time="0.0"/>
+  <testcase name="add up to 10()" classname="com.igorwojda.integer.addupto.Test" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

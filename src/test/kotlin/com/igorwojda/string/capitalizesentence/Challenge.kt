@@ -9,12 +9,12 @@ private fun capitalizeSentence(str: String): String {
 
 private class Test {
     @Test
-    fun `"flower" is capitalized to "Flower"`() {
+    fun `flower is capitalized to Flower`() {
         capitalizeSentence("flower") shouldBeEqualTo "Flower"
     }
 
     @Test
-    fun `"this is a house" is capitalised to "This Is A House"`() {
+    fun `this is a house is capitalised to This Is A House`() {
         capitalizeSentence("this is a house") shouldBeEqualTo "This Is A House"
     }
 }
