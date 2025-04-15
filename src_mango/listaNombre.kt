@@ -31,6 +31,5 @@ class listaNombre {
         listavacia.removeIf { caracteres -> caracteres.length > 3 }
         println(listavacia)
 
-        val myArray = arrayOf()
     }
 }

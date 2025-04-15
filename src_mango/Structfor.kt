@@ -1,7 +1,9 @@
 class Structfor {
 
     fun clase16(listaFrutas: List<String>) {
-        for (fruta in listaFrutas) println("Hoy voy a comerme la fruta $fruta.")
+        for (fruta in listaFrutas) {
+            println("Hoy voy a comerme la fruta $fruta.")
+        }
         listaFrutas.forEach { fruta ->
             println("Hoy voy a comerme una fruta nueva llamada $fruta.")
             }
