@@ -4,7 +4,15 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun getAllPairs(n: Int): List<Pair<Int, Int>> {
-    TODO("Add your solution here")
+    val respuesta: MutableList<Pair<Int,Int>> = mutableListOf()
+    for (comb1 in 0..n){
+        for (comb2 in 0..n) {
+            var pares = Pair(comb1,comb2)
+            respuesta.add(pares)
+            println(pares)
+        }
+    }
+    return respuesta
 }
 
 private class Test {

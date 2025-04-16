@@ -4,7 +4,26 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun fizzBuzz(n: Int): List<String> {
-    TODO("Add your solution here")
+    val lista: MutableList<String> = mutableListOf()
+    (1..n).forEach {
+        when {
+            it % 5 == 0 && it % 3 == 0 -> lista.add("FizzBuzz")
+            it % 3 == 0 -> lista.add("Fizz")
+            it % 5 == 0 -> lista.add("Buzz")
+            else -> lista.add(it.toString())
+        }
+        /*if (it % 15 == 0) {
+            lista.add("FizzBuzz")
+        } else if (it % 5 == 0) {
+            lista.add("Buzz")
+        } else if (it % 3 == 0) {
+            lista.add("Fizz")
+        } else {
+            lista.add(it.toString())
+        }*/
+    }
+    println(lista)
+    return lista
 }
 
 private class Test {

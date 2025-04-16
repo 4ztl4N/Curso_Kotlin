@@ -4,8 +4,15 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun power(base: Int, exponent: Int): Int {
-    TODO("Add your solution here")
+    var resultado: MutableList<Int> = mutableListOf()
+    if (base > 0 && exponent > 0) {
+        for (i in 1..exponent)
+            resultado.add(base)
+    }
+    println(resultado)
+    return resultado.reduce { acc, i -> acc * i }
 }
+
 
 private class Test {
     @Test

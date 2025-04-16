@@ -2,9 +2,15 @@ package com.igorwojda.integer.pyramidgenerator
 
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
+import kotlin.contracts.Returns
 
 fun generatePyramid(n: Int): List<String> {
-    TODO("Add your solution here")
+    for (i in 1..n) {
+        
+    }
+
+
+    return emptyList()
 }
 
 private class Test {

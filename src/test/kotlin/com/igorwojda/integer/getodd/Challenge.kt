@@ -4,8 +4,11 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun filterOdd(list: List<Int>): List<Int> {
-    TODO("Add your solution here")
+    return list.filter { odd ->
+        odd % 2 != 0
+    }
 }
+
 
 private class Test {
     @Test

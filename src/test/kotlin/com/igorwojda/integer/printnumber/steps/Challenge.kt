@@ -4,7 +4,16 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun printNumber(n: Int, step: Int = 1): List<Int> {
-    TODO("Add your solution here")
+    var result: MutableList<Int> = mutableListOf()
+    for (i in n downTo 1 step step) {
+        if (i == 0) {
+            return emptyList()
+        } else {
+            result.add(i)
+            println(result)
+        }
+    }
+    return result
 }
 
 private class Test {
