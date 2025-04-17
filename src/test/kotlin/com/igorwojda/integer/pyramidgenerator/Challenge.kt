@@ -2,15 +2,29 @@ package com.igorwojda.integer.pyramidgenerator
 
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
+import org.junit.platform.commons.util.ToStringBuilder
 import kotlin.contracts.Returns
 
 fun generatePyramid(n: Int): List<String> {
-    for (i in 1..n) {
-        
+    if (n == 1) {
+        return listOf("#")
     }
 
+    val pre: MutableList<Int> = mutableListOf(1)
+    for (i in 2..n) {
+        pre.add(i + 2)
+    }
 
-    return emptyList()
+    val result = pre.map { gatitos ->
+        val rowBuilder = StringBuilder()
+        for (i in gatitos downTo 1 ){
+            rowBuilder.append("#")
+        }
+        val row = rowBuilder.toString()
+        println(row)
+        row
+    }
+    return result
 }
 
 private class Test {
