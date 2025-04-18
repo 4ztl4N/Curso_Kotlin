@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.igorwojda.string.getduplicatedarguments.Test" tests="4" skipped="0" failures="3" errors="0" timestamp="2025-04-18T01:25:58.966Z" hostname="Miross-Mac-mini.local" time="0.029">
+  <properties/>
+  <testcase name="a, e, a, e, d, a returns a, e()" classname="com.igorwojda.string.getduplicatedarguments.Test" time="0.025">
+    <failure message="org.amshove.kluent.internal.ComparisonFailedException: Expected: &lt;[a, e]&gt; but was: &lt;[a, e, d]&gt;" type="org.amshove.kluent.internal.ComparisonFailedException">org.amshove.kluent.internal.ComparisonFailedException: Expected: &lt;[a, e]&gt; but was: &lt;[a, e, d]&gt;
+	at app//org.amshove.kluent.internal.AssertionsKt.assertEquals(Assertions.kt:133)
+	at app//org.amshove.kluent.internal.AssertionsKt.assertEquals(Assertions.kt:123)
+	at app//org.amshove.kluent.internal.AssertionsKt.assertEquals$default(Assertions.kt:122)
+	at app//org.amshove.kluent.BasicKt.shouldBeEqualTo(Basic.kt:10)
+	at app//com.igorwojda.string.getduplicatedarguments.Test.a, e, a, e, d, a returns a, e(Challenge.kt:33)
+	at java.base@21.0.5/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="a, b, c, a returns a()" classname="com.igorwojda.string.getduplicatedarguments.Test" time="0.002">
+    <failure message="org.amshove.kluent.internal.ComparisonFailedException: Expected: &lt;[a]&gt; but was: &lt;[a, b, c]&gt;" type="org.amshove.kluent.internal.ComparisonFailedException">org.amshove.kluent.internal.ComparisonFailedException: Expected: &lt;[a]&gt; but was: &lt;[a, b, c]&gt;
+	at app//org.amshove.kluent.internal.AssertionsKt.assertEquals(Assertions.kt:133)
+	at app//org.amshove.kluent.internal.AssertionsKt.assertEquals(Assertions.kt:123)
+	at app//org.amshove.kluent.internal.AssertionsKt.assertEquals$default(Assertions.kt:122)
+	at app//org.amshove.kluent.BasicKt.shouldBeEqualTo(Basic.kt:10)
+	at app//com.igorwojda.string.getduplicatedarguments.Test.a, b, c, a returns a(Challenge.kt:28)
+	at java.base@21.0.5/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="no arguments returns empty list()" classname="com.igorwojda.string.getduplicatedarguments.Test" time="0.001"/>
+  <testcase name="a, b, c returns empty list()" classname="com.igorwojda.string.getduplicatedarguments.Test" time="0.001">
+    <failure message="org.amshove.kluent.internal.ComparisonFailedException: Expected: &lt;[]&gt; but was: &lt;[a, b, c]&gt;" type="org.amshove.kluent.internal.ComparisonFailedException">org.amshove.kluent.internal.ComparisonFailedException: Expected: &lt;[]&gt; but was: &lt;[a, b, c]&gt;
+	at app//org.amshove.kluent.internal.AssertionsKt.assertEquals(Assertions.kt:133)
+	at app//org.amshove.kluent.internal.AssertionsKt.assertEquals(Assertions.kt:123)
+	at app//org.amshove.kluent.internal.AssertionsKt.assertEquals$default(Assertions.kt:122)
+	at app//org.amshove.kluent.BasicKt.shouldBeEqualTo(Basic.kt:10)
+	at app//com.igorwojda.string.getduplicatedarguments.Test.a, b, c returns empty list(Challenge.kt:23)
+	at java.base@21.0.5/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

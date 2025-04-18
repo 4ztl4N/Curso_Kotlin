@@ -4,7 +4,20 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 fun generateSteps(n: Int): List<String> {
-    TODO("Add your solution here")
+    val result = (1..n).map { gato ->
+        val rowBuilder = StringBuilder()
+        val espacio = n - gato
+        repeat(gato) {
+            rowBuilder.append("#")
+        }
+        repeat(espacio) {
+            rowBuilder.append(" ")
+        }
+        val row = rowBuilder.toString()
+        println(row)
+        row
+    }
+    return result
 }
 
 private class Test {

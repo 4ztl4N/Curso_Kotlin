@@ -4,7 +4,11 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun reverseInt(i: Int): Int {
-    TODO("Add your solution here")
+    if (i >= 0) {
+        return i.toString().reversed().toInt()
+    } else {
+        return (i * -1).toString().reversed().toInt() * -1
+    }
 }
 
 private class Test {
