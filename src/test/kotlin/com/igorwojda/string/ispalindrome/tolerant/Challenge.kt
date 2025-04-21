@@ -4,7 +4,11 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun isTolerantPalindrome(str: String): Boolean {
-    TODO("Add your solution here")
+    var reversa = str.reversed()
+
+
+
+    return true
 }
 
 private class Test {
