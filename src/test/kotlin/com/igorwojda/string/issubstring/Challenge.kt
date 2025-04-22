@@ -4,8 +4,30 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun isSubstring(str: String, subStr: String): Boolean {
-    TODO("Add your solution here")
+    if (subStr.isEmpty()) return true
+
+    val prefijo = str.commonPrefixWith(subStr)
+    val sufijo = str.commonSuffixWith(subStr)
+
+    if (sufijo == subStr) return true
+    if (prefijo == subStr) return true
+
+    val builder = StringBuilder()
+    var j = 0
+    for (i in str.indices) {
+        if (str[i] == subStr[j]) {
+            builder.append(str[i])
+            j++
+
+        } else continue
+    }
+
+    if (builder.toString() == subStr) {
+        return true
+    }
+    return false
 }
+
 
 private class Test {
     @Test

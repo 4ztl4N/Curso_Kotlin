@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.igorwojda.string.issubstring.Test" tests="13" skipped="0" failures="3" errors="0" timestamp="2025-04-22T01:39:03.375Z" hostname="Miross-Mac-mini.local" time="0.036">
+  <properties/>
+  <testcase name="abc not in empty string()" classname="com.igorwojda.string.issubstring.Test" time="0.012"/>
+  <testcase name="e not in abcd()" classname="com.igorwojda.string.issubstring.Test" time="0.002"/>
+  <testcase name="abc not in aaababab()" classname="com.igorwojda.string.issubstring.Test" time="0.001"/>
+  <testcase name="abc in abc()" classname="com.igorwojda.string.issubstring.Test" time="0.001"/>
+  <testcase name="empty sub-string not in abc()" classname="com.igorwojda.string.issubstring.Test" time="0.0"/>
+  <testcase name="empty sub-string not in empty string()" classname="com.igorwojda.string.issubstring.Test" time="0.0"/>
+  <testcase name="abd not in abcd()" classname="com.igorwojda.string.issubstring.Test" time="0.011">
+    <failure message="org.amshove.kluent.internal.ComparisonFailedException: Expected: &lt;false&gt; but was: &lt;true&gt;" type="org.amshove.kluent.internal.ComparisonFailedException">org.amshove.kluent.internal.ComparisonFailedException: Expected: &lt;false&gt; but was: &lt;true&gt;
+	at app//org.amshove.kluent.internal.AssertionsKt.assertEquals(Assertions.kt:133)
+	at app//org.amshove.kluent.internal.AssertionsKt.assertEquals(Assertions.kt:123)
+	at app//org.amshove.kluent.internal.AssertionsKt.assertEquals$default(Assertions.kt:122)
+	at app//org.amshove.kluent.NumericalKt.shouldBeEqualTo(Numerical.kt:10)
+	at app//com.igorwojda.string.issubstring.Test.abd not in abcd(Challenge.kt:35)
+	at java.base@21.0.5/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.5/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="aab in aaab()" classname="com.igorwojda.string.issubstring.Test" time="0.001"/>
+  <testcase name="bc in abc()" classname="com.igorwojda.string.issubstring.Test" time="0.0"/>
+  <testcase name="ab in abc()" classname="com.igorwojda.string.issubstring.Test" time="0.0"/>
+  <testcase name="abc in aaababcd()" classname="com.igorwojda.string.issubstring.Test" time="0.001">
+    <failure message="java.lang.StringIndexOutOfBoundsException: Index 3 out of bounds for length 3" type="java.lang.StringIndexOutOfBoundsException">java.lang.StringIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55)
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210)
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.lang.String.checkIndex(String.java:4832)
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:46)
+	at java.base/java.lang.String.charAt(String.java:1555)
+	at com.igorwojda.string.issubstring.ChallengeKt.isSubstring(Challenge.kt:18)
+	at com.igorwojda.string.issubstring.ChallengeKt.access$isSubstring(Challenge.kt:1)
+	at com.igorwojda.string.issubstring.Test.abc in aaababcd(Challenge.kt:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="cd in abcdef()" classname="com.igorwojda.string.issubstring.Test" time="0.001">
+    <failure message="java.lang.StringIndexOutOfBoundsException: Index 2 out of bounds for length 2" type="java.lang.StringIndexOutOfBoundsException">java.lang.StringIndexOutOfBoundsException: Index 2 out of bounds for length 2
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55)
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210)
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.lang.String.checkIndex(String.java:4832)
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:46)
+	at java.base/java.lang.String.charAt(String.java:1555)
+	at com.igorwojda.string.issubstring.ChallengeKt.isSubstring(Challenge.kt:18)
+	at com.igorwojda.string.issubstring.ChallengeKt.access$isSubstring(Challenge.kt:1)
+	at com.igorwojda.string.issubstring.Test.cd in abcdef(Challenge.kt:80)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="abc in ababc()" classname="com.igorwojda.string.issubstring.Test" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
