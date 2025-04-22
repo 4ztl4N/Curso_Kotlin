@@ -2,9 +2,23 @@ package com.igorwojda.string.longestword
 
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
+import kotlin.coroutines.ContinuationInterceptor
+import kotlin.coroutines.CoroutineContext
 
 private fun longestWord(str: String): String {
-    TODO("Add your solution here")
+    val conteo = str
+        .replace(Regex("[^A-Za-z]"), " ")
+        .split(" ")
+        .filter { it.isNotEmpty() }
+
+    var palabra = ""
+    for (i in conteo) {
+        if (palabra.length < i.length) {
+            palabra = i
+        }
+    }
+    return palabra
+
 }
 
 private class Test {

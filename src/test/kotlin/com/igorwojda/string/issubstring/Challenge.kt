@@ -6,24 +6,17 @@ import org.junit.jupiter.api.Test
 private fun isSubstring(str: String, subStr: String): Boolean {
     if (subStr.isEmpty()) return true
 
-    val prefijo = str.commonPrefixWith(subStr)
-    val sufijo = str.commonSuffixWith(subStr)
-
-    if (sufijo == subStr) return true
-    if (prefijo == subStr) return true
-
-    val builder = StringBuilder()
-    var j = 0
+    val long = subStr.length
     for (i in str.indices) {
-        if (str[i] == subStr[j]) {
-            builder.append(str[i])
-            j++
-
-        } else continue
-    }
-
-    if (builder.toString() == subStr) {
-        return true
+        if (str[i] == subStr[0]) {
+            if (i + long <= str.length) {
+                val sub2 = str.substring(i, i + long)
+                println("$subStr == $sub2 = ${sub2 == subStr}")
+                if (sub2 == subStr) {
+                    return true
+                }
+            }
+        }
     }
     return false
 }
