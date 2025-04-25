@@ -4,7 +4,34 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun getCoins(amount: Int, coins: List<Int>): Int {
-    TODO("Add your solution here")
+    if (amount == 0) return 1
+    if (coins.isEmpty()) return 0
+
+    val resultados = mutableListOf<List<Int>>()
+    val pila = ArrayDeque<Triple<List<Int>, Int, Int>>()
+    val nums = coins.sorted()
+    pila.add(Triple(emptyList(), 0, 0))
+
+    while (pila.isNotEmpty()) {
+        val (combinacion, suma, index) = pila.removeLast()
+
+        if (suma == amount) {
+            resultados.add(combinacion)
+            continue
+        }
+
+        for (i in index until nums.size) {
+            val numero = nums[i]
+            val nuevaSuma = suma + numero
+
+            if (nuevaSuma > amount) break
+
+            pila.add(Triple(combinacion + numero, nuevaSuma, i))
+        }
+    }
+
+    return resultados.count()
+
 }
 
 private class Test {

@@ -4,7 +4,8 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 fun flatten(list: List<*>): List<*> {
-    TODO("Add your solution here")
+
+    TODO( )
 }
 
 private class Test {

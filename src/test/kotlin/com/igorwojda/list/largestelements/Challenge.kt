@@ -3,28 +3,16 @@ package com.igorwojda.list.largestelements
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 import java.util.*
+import java.util.PriorityQueue
 
 private fun largestElements(list: List<Int>, count: Int): List<Int> {
-    if (list.size <= count) {
-        return list
-    }
+    if (count >= list.size) return list
 
-    val priorityQueue = PriorityQueue<Int>()
-
-    repeat(count) {
-        priorityQueue.add(list[it])
-    }
-
-    list
-        .drop(count)
-        .forEach {
-            if (it > priorityQueue.peek()) {
-                priorityQueue.poll()
-                priorityQueue.add(it)
-            }
-        }
-
-    return priorityQueue.toList()
+    return list
+        .sorted()
+        .windowed(count)
+        .maxBy { it.sum() }
+        .toList()
 }
 
 private class Test {

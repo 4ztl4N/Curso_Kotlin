@@ -4,7 +4,42 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun formatTrainRoute(stations: List<String>): String {
-    TODO("Add your solution here")
+    /*var inicio = "Train is calling at"
+    for (index in stations.indices) {
+        val estacion = stations[index]
+        when (index) {
+            0 -> inicio += " $estacion"
+            stations.size-1 -> inicio += " and $estacion"
+            else -> inicio += ", $estacion"
+        }
+    }
+    println(inicio)
+    return inicio*/
+
+    /*var inicio = "Train is calling at"
+    for (index in stations.indices) {
+        when (index) {
+            0 -> inicio = inicio + " " + stations[index]
+            stations.size - 1 -> inicio = inicio + " and " + stations[index]
+            else -> inicio = inicio + ", " + stations[index]
+        }
+    }
+    println(inicio)
+    return inicio*/
+
+    var inicio = "Train is calling at"
+    for (estacion in stations) {
+        val indexOf = stations.indexOf(estacion)
+        if (indexOf == 0) {
+            inicio = "$inicio $estacion"
+        } else if (indexOf == stations.size - 1) {
+            inicio = "$inicio and $estacion"
+        } else {
+            inicio = "$inicio, $estacion"
+        }
+    }
+    println(inicio)
+    return inicio
 }
 
 private class Test {
