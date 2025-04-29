@@ -4,7 +4,17 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun squareEquals(list: List<Int>, squared: List<Int>): Boolean {
-    TODO("Add your solution here")
+    if (list.size != squared.size) return false
+    if (list.size != list.toSet().size) return false
+
+    val cuadrados: MutableList<Int> = mutableListOf()
+    for (num in list) {
+        cuadrados.add(num * num)
+    }
+    if (cuadrados == squared.sorted()) {
+        return true
+    }
+    return false
 }
 
 private class Test {

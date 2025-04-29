@@ -4,8 +4,12 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun smallestElements(list: List<Int>, count: Int): List<Int> {
-    TODO("Add your solution here")
-}
+    if (list.size < count) return list
+    val resultado =  list.windowed(count,1).minBy { it.sum() }
+    println(resultado)
+    return resultado
+    }
+
 
 private class Test {
     @Test
@@ -26,7 +30,7 @@ private class Test {
     fun `2 smallest elements`() {
         val list = listOf(5, 1, 3)
 
-        smallestElements(list, 2) shouldBeEqualTo listOf(3, 1)
+        smallestElements(list, 2) shouldBeEqualTo listOf(1,3)
     }
 
     @Test

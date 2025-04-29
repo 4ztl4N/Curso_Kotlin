@@ -2,9 +2,13 @@ package com.igorwojda.list.sort.bubblesort
 
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
-
 private fun bubbleSort(list: List<Int>): List<Number> {
-    TODO("Add your solution here")
+    if (list.size < 1) return emptyList()
+    if (list.size == 1) return list
+    var Clon: MutableList<List<Int>> = mutableListOf(list)
+    var n = 1
+
+    return emptyList()
 }
 
 private class Test {

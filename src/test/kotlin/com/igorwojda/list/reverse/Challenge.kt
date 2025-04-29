@@ -4,7 +4,11 @@ import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 private fun reverse(list: List<String>): List<String> {
-    TODO("Add your solution here")
+    var resultado: MutableList<String> = mutableListOf()
+    for (index in list.size - 1 downTo 0) {
+        resultado.add(list[index])
+    }
+    return resultado
 }
 
 private class Test {

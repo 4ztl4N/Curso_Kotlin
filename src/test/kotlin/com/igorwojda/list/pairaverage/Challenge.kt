@@ -1,14 +1,23 @@
 package com.igorwojda.list.pairaverage
 
+import com.igorwojda.common.anycallback.anyCallback
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 fun hasAverage(list: List<Int>, average: Double): Boolean {
-    TODO("Add your solution here")
-}
+    if (list.size < 2) return false
 
-inline fun <K, V> MutableMap<K, V>.incrementExisting(key: K, value: V) {
-    put(key, value)
+    val pares = mutableListOf<Pair<Int, Int>>()
+    for (i in 0 until list.size) {
+        for (j in i + 1 until list.size) {
+            pares.add(Pair(list[i], list[j]))
+        }
+    }
+    val promedios = pares.map { (a, b) -> listOf(a, b).average() }
+    if (promedios.any { it == average }) {
+        return true
+    }
+    return false
 }
 
 private class Test {

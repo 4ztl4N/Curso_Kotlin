@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.igorwojda.list.squareequal.Test" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-04-29T01:37:18.118Z" hostname="Miross-Mac-mini.local" time="0.02">
+  <properties/>
+  <testcase name="square 1, 2, 3 does not equal square 9, 1, 7()" classname="com.igorwojda.list.squareequal.Test" time="0.015"/>
+  <testcase name="square 1, 2, 3 does not equal square 9, 1()" classname="com.igorwojda.list.squareequal.Test" time="0.001"/>
+  <testcase name="square 1, 2, 1 does not equal 4, 1, 4()" classname="com.igorwojda.list.squareequal.Test" time="0.001"/>
+  <testcase name="square 1, 2, 3 equals square 9, 1, 4()" classname="com.igorwojda.list.squareequal.Test" time="0.001"/>
+  <testcase name="square 2 equal square 4()" classname="com.igorwojda.list.squareequal.Test" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
